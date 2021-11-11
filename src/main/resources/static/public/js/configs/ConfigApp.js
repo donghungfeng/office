@@ -4,8 +4,9 @@ const CONFIG_APP = {
 	URL:{
 		CONTEXT : ''
 		,HOME:'app/common/dashboard'
-		,LOGIN:'app/common/login'
+		,LOGIN:'/'
 		,API_DATA:'/public'
+		,LOGIN_PAGE:'/'
 
 	},
 

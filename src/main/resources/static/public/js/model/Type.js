@@ -1,10 +1,10 @@
-var Color = function(){
+var Type = function(){
 	var that = this;
 	const URL = {
-		GETALL:'color/search',
-		GETBYID:'color/getbyid',
-		SAVE:'color/create',
-		DEL:'color/delete',
+		GETALL:'type/search',
+		GETBYID:'type/getbyid',
+		SAVE:'type/create',
+		DEL:'type/delete',
 	}
 	
 	const LABEL={
@@ -61,7 +61,7 @@ var Color = function(){
 	
 	this.bindSelect = function(sControlId){
 		that.getAll();
-		var html = '<option  value="0"> - Chọn màu - </option>';
+		var html = '<option  value="0"> - Chọn loại văn bản - </option>';
 		for (let i = 0; i < that.LIST.length; i++) {
 			var item = that.LIST[i];
 			html +='<option  value="'+ item.id +'">' + item.name +'</option>';
@@ -71,7 +71,7 @@ var Color = function(){
 	}
 	this.bindSelect2 = function(sControlId){
 		that.getAll();
-		var html = '<option  value="0"> -Chọn màu- </option>';
+		var html = '<option  value="0"> -Chọn loại văn bản- </option>';
 		for (let i = 0; i < that.LIST.length; i++) {
 			var item = that.LIST[i];
 			html +='<option  value="'+ item.id +'">' + item.name +'</option>';

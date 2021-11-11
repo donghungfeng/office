@@ -16150,7 +16150,7 @@ var dataSpace = "ui-effects-",
 	dataSpaceStyle = "ui-effects-style",
 	dataSpaceAnimated = "ui-effects-animated",
 
-	// Create a local jQuery because jQuery Color relies on it and the
+	// Create a local jQuery because jQuery Type relies on it and the
 	// global may not exist with AMD and a custom build (#10199)
 	jQuery = $;
 
@@ -16159,7 +16159,7 @@ $.effects = {
 };
 
 /*!
- * jQuery Color Animations v2.1.2
+ * jQuery Type Animations v2.1.2
  * https://github.com/jquery/jquery-color
  *
  * Copyright 2014 jQuery Foundation and other contributors
@@ -16232,7 +16232,7 @@ $.effects = {
 			}
 		} ],
 
-	// JQuery.Color( )
+	// JQuery.Type( )
 	color = jQuery.Color = function( color, green, blue, alpha ) {
 		return new jQuery.Color.fn.parse( color, green, blue, alpha );
 	},
@@ -16289,7 +16289,7 @@ $.effects = {
 	// Element for support tests
 	supportElem = jQuery( "<p>" )[ 0 ],
 
-	// Colors = jQuery.Color.names
+	// Colors = jQuery.Type.names
 	colors,
 
 	// Local aliases of functions called often

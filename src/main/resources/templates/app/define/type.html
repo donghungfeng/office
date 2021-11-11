@@ -3,11 +3,11 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Danh mục | Màu sắc</title>
-    <script type="text/javascript" th:src="@{/public/js/model/Color.js}"></script>
-    <script type="text/javascript" th:src="@{/public/js/app/define/ColorController.js}"></script>
+    <title>Danh mục | Loại văn bản</title>
+    <script type="text/javascript" th:src="@{/public/js/model/Type.js}"></script>
+    <script type="text/javascript" th:src="@{/public/js/app/define/TypeController.js}"></script>
     <script type="text/javascript">
-        var oColorController = new ColorController();
+        var oTypeController = new TypeController();
     </script>
 </head>
 
@@ -18,10 +18,10 @@
             <div class="col-sm-4 col-xs-12">
                 <div class="box-form box" style="min-height:calc(100vh - 170px);">
                     <div class="box-body">
-                        <h4 class="form-title">Thông tin màu sắc </h4>
+                        <h4 class="form-title">Thông tin loại văn bản </h4>
                         <div class="box-form">
                             <div class="form-group">
-                                <div class="label-text">Màu sắc: <span class="required">(*)</span></div>
+                                <div class="label-text">Tên loại: <span class="required">(*)</span></div>
                                 <input type="text" id="name" class="form-control" placeholder="">
                             </div>
                             <div class="form-group">
@@ -30,7 +30,7 @@
                                           style="resize: vertical;height:60px;"></textarea>
                             </div>
                             <div class="form-group">
-                                <div class="label-text">Ghi chú:</div>
+                                <div class="label-text">Trạng thái:</div>
                                 <select class="form-control" name="" id="status">
                                     <option value="-1">Khóa</option>
                                     <option value="1">Hoạt động</option>

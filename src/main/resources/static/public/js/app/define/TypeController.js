@@ -1,10 +1,10 @@
-var ColorController = function(){
+var TypeController = function(){
 	// Thuộc tính
 	var that = this;
-	this.AppTitle = 'Color';
+	this.AppTitle = 'Loại văn bản';
 	this.oTable = null;
 	this.oDialog = null;
-	this.oColor = new Color();
+	this.oType = new Type();
 	
 	// Phương thức
 	this.initPage = function(){
@@ -14,10 +14,10 @@ var ColorController = function(){
 	}
 
 	that.bindForm = function(){
-		that.oColor.getById();
-		$('#name').val(that.oColor.name);
-		$('#note').val(that.oColor.note);
-		$('#status').val(that.oColor.status);
+		that.oType.getById();
+		$('#name').val(that.oType.name);
+		$('#note').val(that.oType.note);
+		$('#status').val(that.oType.status);
 		that.onView();
 	}
 
@@ -41,7 +41,7 @@ var ColorController = function(){
 	}
 
 	that.clearForm = function(){
-		that.oColor.id = 0;
+		that.oType.id = 0;
 		$('#name').val('');
 		$('#note').val('');
 		$('#status').val('1');
@@ -49,11 +49,11 @@ var ColorController = function(){
 	}
 
 	this.search = function(){
-		that.oColor.getAll();
+		that.oType.getAll();
 		that.oTable.clear().draw();
         var aRows = [];
-		for (var i = 0; i < that.oColor.LIST.length; i++) {
-			var item = that.oColor.LIST[i];
+		for (var i = 0; i < that.oType.LIST.length; i++) {
+			var item = that.oType.LIST[i];
 			var hidden = '<input type="hidden" class="rowID" value="' + item.id + '" />';
 			var _status = item.status === 1 ? '<label class="label label-success">Hoạt động</label>' : '<label class="label label-danger">Khóa</label>'
 			aRows.push([
@@ -79,7 +79,7 @@ var ColorController = function(){
 	}
 
 	this.validDel=function(){
-		if (that.oColor.id == 0) {
+		if (that.oType.id == 0) {
 			alert('Chưa chọn mục cần xóa');
 			return false;
 		}
@@ -101,10 +101,10 @@ var ColorController = function(){
 			if (!that.validSave()) {
 				return false;
 			}
-			that.oColor.name =  $('#name').val();
-			that.oColor.note =  $('#note').val();
-			that.oColor.status =  $('#status').val();
-			var rs = that.oColor.save();
+			that.oType.name =  $('#name').val();
+			that.oType.note =  $('#note').val();
+			that.oType.status =  $('#status').val();
+			var rs = that.oType.save();
 			 if(rs.CODE == "00"){
 				 alert(rs.MESSAGE);
 				 that.initPage();
@@ -121,7 +121,7 @@ var ColorController = function(){
 
 			if(!confirm('Bạn có chắc chắn muốn xóa không?')){return false;}
 
-			var rs = that.oColor.del();
+			var rs = that.oType.del();
 			if(rs.CODE == "00"){
 				 that.initPage();
 			}
@@ -145,7 +145,7 @@ var ColorController = function(){
             else {
                 that.oTable.$('tr.selected').removeClass('selected');
                 $(this).addClass('selected');
-				that.oColor.id = $(this).find('.rowID').val();
+				that.oType.id = $(this).find('.rowID').val();
 				that.bindForm();
 		   }
 		   return true;
