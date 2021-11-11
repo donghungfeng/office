@@ -4,16 +4,16 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "color", schema = "main", catalog = "")
-public class ColorEntity {
+@Table(name = "type", schema = "main", catalog = "")
+public class TypeEntity {
     private Long id;
     private String name;
     private String note;
-    private short status;
+    private Integer status;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long getId() {
         return id;
     }
@@ -44,27 +44,12 @@ public class ColorEntity {
 
     @Basic
     @Column(name = "status")
-    public short getStatus() {
+    public Integer getStatus() {
         return status;
     }
 
-    public void setStatus(short status) {
+    public void setStatus(Integer status) {
         this.status = status;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        ColorEntity that = (ColorEntity) o;
-        return id == that.id &&
-                status == that.status &&
-                Objects.equals(name, that.name) &&
-                Objects.equals(note, that.note);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, name, note, status);
-    }
 }
