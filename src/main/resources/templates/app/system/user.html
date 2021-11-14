@@ -4,11 +4,11 @@
 <head>
     <meta charset="utf-8" />
     <title>Khai báo | Danh sách tài khoản</title>
-<!--    <script type="text/javascript" th:src="@{/public/js/model/Customer.js}"></script>-->
-<!--    <script type="text/javascript" th:src="@{/public/js/app/customer/CustomerView.js}"></script>-->
-<!--    <script type="text/javascript">-->
-<!--        var oCustomerView = new CustomerView();-->
-<!--    </script>-->
+    <script type="text/javascript" th:src="@{/public/js/model/User.js}"></script>
+    <script type="text/javascript" th:src="@{/public/js/app/system/UserView.js}"></script>
+    <script type="text/javascript">
+        var oUserView = new UserView();
+    </script>
     <style>
         tr > td > .row-actions {
            display:none;
@@ -26,8 +26,8 @@
         <div class="main-content">
             <div class="row">
                 <div class="col-sm-12 col-xs-12">
-                    <a th:href="@{/app/common/dashboard}" class="url">SUSOPA</a> > <a href="#">Khách hàng</a> > <a
-                        href="">Danh sách khách hàng</a>
+                    <a th:href="@{/app/common/dashboard}" class="url">SUSOPA</a> > <a href="#">Hệ thống</a> > <a
+                        href="">Quản lý tài khoản</a>
                 </div>
                 <div class="col-sm-12 col-xs-12">
                     <div class="box-form box">
@@ -52,14 +52,15 @@
                                     <thead>
                                         <tr>
                                             <th style="width:50px;text-align: center;">STT</th>
-                                            <th style="width:300px;text-align: center;">Tên khách hàng</th>
-                                            <th style="text-align: center;">Điện thoại</th>
-                                            <th style="width:200px;text-align: center;">Địa chỉ</th>
-                                            <th style="width:150px;text-align: center;">Email</th>
-                                            <th style="width:100px;text-align: center;">Số đơn</th>
-                                            <th style="width:100px;text-align: center;">Tổng tiền</th>
-                                            <th style="width:100px;text-align: center;">Hạng</th>
-                                            <th style="width:150px;text-align: center;"></th>
+                                            <th>Tài khoản</th>
+                                            <th>Tên cán bộ</th>
+                                            <th>Số điện thoại</th>
+                                            <th>Email</th>
+                                            <th>Ngày sinh</th>
+                                            <th>Chức vụ</th>
+                                            <th>Quyền</th>
+                                            <th>Trạng thái</th>
+                                            <th style="width:100px;text-align: center;">Tác vụ</th>
                                         </tr>
                                     </thead>
                                     <tbody>

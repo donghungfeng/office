@@ -21,6 +21,7 @@ var User = function(){
 	this.role = 'USER';
 	this.position = '';
 	this.status=1;
+	this.email = '';
 
 	this.validSave = function(){
 		var alert = '';
@@ -50,6 +51,7 @@ var User = function(){
 		this.role=item.role;
 		this.position=item.position;
 		this.status=item.status;
+		this.email=item.email;
 	}
 
 	//save data
@@ -64,6 +66,7 @@ var User = function(){
 			role:that.role,
 			position:that.position,
 			status:that.status,
+			email:that.email
 		}
 		console.log(data);
 		return  DATA.set(URL.SAVE,data);
