@@ -29,7 +29,6 @@ var Type = function(){
     this.getAll = function(){
 		var rs = DATA.get(URL.GETALL);
 		that.LIST = rs.RESULT;
-		console.log(rs);
 	}
 	
 	// get data by id
@@ -50,7 +49,6 @@ var Type = function(){
 			note:that.note,
 			status:that.status,
 		}
-		console.log(data);
 		return  DATA.set(URL.SAVE,data);
 	}
 	

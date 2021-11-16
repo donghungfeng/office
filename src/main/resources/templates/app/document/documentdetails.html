@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="layout/popup">
+
+<head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" th:src="@{/public/js/model/Document.js}"></script>
+    <script type="text/javascript" th:src="@{/public/js/model/Type.js}"></script>
+    <script type="text/javascript" th:src="@{/public/js/model/User.js}"></script>
+    <script type="text/javascript" th:src="@{/public/js/app/document/DocumentDetailsView.js}"></script>
+    <script type="text/javascript">
+        var oDocumentDetailsView = new DocumentDetailsView();
+    </script>
+</head>
+
+<body>
+    <div layout:fragment="content">
+        <div class="FORM row">
+            <div class="col-sm-12 col-xs-12">
+                <div class="form-group">
+                    <div class="label-text">Loại văn bản </div>
+                    <select name="" class="form-control" id="type" disabled>
+
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="FORM row">
+            <div class="col-sm-12 col-xs-12">
+                <div class="form-group">
+                    <div class="label-text">Mức độ ưu tiên </div>
+                    <select name="" class="form-control" id="priority" disabled>
+                        <option value="1">Thấp</option>
+                        <option value="2">Trung bình</option>
+                        <option value="3">Cao</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="FORM box-form">
+            <div class="row">
+                <div class="col-sm-12 col-xs-12">
+                    <div class="form-group">
+                        <div class="label-text">Số hiệu </div>
+                        <input type="text" class="form-control" id="num" disabled>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12 col-xs-12">
+                    <div class="form-group">
+                        <div class="label-text">Cơ quan ra văn bản </div>
+                        <input type="text" class="form-control" id="organOut" disabled>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12 col-xs-12">
+                    <div class="form-group">
+                        <div class="label-text">Ngày ra văn bản </div>
+                        <input type="date" class="form-control" id="dateOut" disabled>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12 col-xs-12">
+                    <div class="form-group">
+                        <div class="label-text">Ngày đến </div>
+                        <input type="date" class="form-control" id="dateReceive" disabled>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12 col-xs-12">
+                    <div class="form-group">
+                        <div class="label-text">Cán bộ thực hiện </div>
+                        <select name="" class="form-control" id="assignee" disabled>
+
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12 col-xs-12">
+                    <div class="form-group">
+                        <div class="label-text">Trích yếu nội dung </div>
+                        <textarea name="" id="quote" class="form-control" disabled cols="30" rows="5"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12 col-xs-12">
+                    <div class="form-group">
+                        <div class="label-text">Mô tả </div>
+                        <textarea name="" id="description" class="form-control" disabled cols="30" rows="5"></textarea>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="ACTIONS box-action text-center">
+            <button type="button" class="btn btn-primary btn-sm" id="btnSave" disabled>
+                <i class="fa fa-save"></i> Lưu
+            </button>
+            <button type="button" class="btn btn-primary btn-sm" id="btnClose" disabled>
+                <i class="fa fa-remove"></i> Đóng
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>

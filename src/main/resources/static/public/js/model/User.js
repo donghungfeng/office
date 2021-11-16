@@ -35,7 +35,6 @@ var User = function(){
     this.getAll = function(){
 		var rs = DATA.get(URL.GETALL);
 		that.LIST = rs.RESULT;
-		console.log(rs);
 	}
 	
 	// get data by id
@@ -68,7 +67,6 @@ var User = function(){
 			status:that.status,
 			email:that.email
 		}
-		console.log(data);
 		return  DATA.set(URL.SAVE,data);
 	}
 	
@@ -79,7 +77,7 @@ var User = function(){
 	
 	this.bindSelect = function(sControlId){
 		that.getAll();
-		var html = '<option  value="0"> - Chọn loại văn bản - </option>';
+		var html = '<option  value="0"> - Chọn cán bộ thực hiện - </option>';
 		for (let i = 0; i < that.LIST.length; i++) {
 			var item = that.LIST[i];
 			html +='<option  value="'+ item.id +'">' + item.name +'</option>';
@@ -89,7 +87,7 @@ var User = function(){
 	}
 	this.bindSelect2 = function(sControlId){
 		that.getAll();
-		var html = '<option  value="0"> -Chọn loại văn bản- </option>';
+		var html = '<option  value="0"> -Chọn cán bộ thực hiện- </option>';
 		for (let i = 0; i < that.LIST.length; i++) {
 			var item = that.LIST[i];
 			html +='<option  value="'+ item.id +'">' + item.name +'</option>';
