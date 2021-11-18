@@ -80,156 +80,32 @@
 					<div class="col-sm-6 col-xs-12">
 						<div class="box">
 							<div class="box-head">
-								<div class="pull-left title">Thống kê văn bản</div>
+								<div class="pull-left title">Thông báo quan trọng</div>
 								<div class="pull-right">
-									<div class="dropdown select-dropdown">
-										<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
-											Theo tháng
-											<span class="caret"></span>
-										</button>
-										<ul class="dropdown-menu dropdown-menu-right">
-											<li><a href="#">Tháng này</a></li>
-											<li><a href="#">Năm nay</a></li>
-											<li><a href="#">Hôm nay</a></li>
-										</ul>
-									</div>
+
 								</div>
 								<div class="clearfix"></div>
 							   
 							</div>
-							<div class="box-body">
-								<div id="chart-bs" style="height: 300px;"></div>
-							</div>
-	
+
 						</div>
 					</div>
 					<div class="col-sm-6 col-xs-12">
 						<div class="box">
 							<div class="box-head">
-								<div class="pull-left title">Thống kê văn bản</div>
+								<div class="pull-left title">Các văn bản cần thực hiện</div>
 								<div class="pull-right">
-									<div class="dropdown select-dropdown">
-										<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
-											Theo tháng
-											<span class="caret"></span>
-										</button>
-										<ul class="dropdown-menu dropdown-menu-right">
-											<li><a href="#">Tháng này</a></li>
-											<li><a href="#">Năm nay</a></li>
-											<li><a href="#">Hôm nay</a></li>
-										</ul>
-									</div>
+
 								</div>
 								<div class="clearfix"></div>
 							   
 							</div>
-							<div class="box-body">
-								<div id="chart-line" style="height: 300px;"></div>
-							</div>
-	
+
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<script type="text/javascript">
-        
-			$("#chart-line").highcharts({
-	
-				title: {
-					text:null
-				},
-	
-				subtitle: {
-					text: null
-				},
-				xAxis: {
-					categories: [
-						'T1',
-						'T2',
-						'T3'
-					],
-					crosshair: true
-				},
-				yAxis: {
-					title: {
-						text: null
-					}
-				},
-				legend: {
-					layout: 'vertical',
-					align: 'center',
-					verticalAlign: 'bottom'
-				},
-	
-				plotOptions: {
-					series: {
-						label: {
-							connectorAllowed: false
-						}
-					}
-				},
-	
-				series: [{
-					name: 'Văn bản',
-					data: [43934, 52503, 57177]
-				}],
-				credits: {
-					enabled: false
-				},
-	
-			});
-			$("#chart-bs").highcharts({
-				chart: {
-					type: 'column'
-				},
-				title: {
-					text: null,
-				},
-				subtitle: {
-					text: null,
-				},
-				xAxis: {
-					categories: [
-						'2013',
-						'2014',
-						'2015',
-						'2016',
-						'2017'
-					],
-					crosshair: true
-				},
-				yAxis: {
-					min: 0,
-					title: {
-						text: null
-					}
-				},
-				credits: {
-					enabled: false
-				},
-				tooltip: {
-					headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-					pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-						'<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
-					footerFormat: '</table>',
-					shared: true,
-					useHTML: true
-				},
-				plotOptions: {
-					column: {
-						pointPadding: 0,
-						borderWidth: 0
-					}
-				},
-				series: [{
-					name: 'Văn bản',
-					data: [49.9, 71.5, 106.4, 129.2, 144.0],
-					color:'#246BBB'
-	
-				}]
-			});
-		</script>
 	</div>
 </body>
 

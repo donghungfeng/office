@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="layout/main">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Chi tiết văn bản</title>
+    <script type="text/javascript" th:src="@{/public/js/model/Document.js}"></script>
+    <script type="text/javascript" th:src="@{/public/js/app/document/DocumentView.js}"></script>
+    <script type="text/javascript">
+        var oDocumentView = new DocumentView();
+    </script>
+    <style>
+        tr > td > .row-actions {
+           display:none;
+        }
+
+        tr.selected > td >  .row-actions {
+            display:block !important;
+        }
+        .row-actions button{margin: 0 4px !important;}
+    </style>
+</head>
+
+<body>
+    <div layout:fragment="content">
+        <div class="main-content">
+            <div class="row">
+                <div class="col-sm-12 col-xs-12">
+                    <div class="box-form box">
+                        <div class="box-body">
+                            <h4 class="form-title" id="AppTitle"></h4>
+                            <div class="box-form FORM">
+                                <div class="row">
+                                    <div class="form-group col-sm-3 ACTIONS">
+                                        <button class="btn btn-success" id="btnAddNew"><i class="fa fa-plus"></i> Chỉnh sửa</button>
+                                        <button class="btn btn-success" id="btnAddNew"><i class="fa fa-plus"></i> Comment</button>
+                                        <button class="btn btn-success" id="btnAddNew"><i class="fa fa-plus"></i> Chuyển trạng thái</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-8 col-xs-12">
+                    <div class="box" style="min-height:calc(100vh - 170px);">
+                        <div class="box-body">
+                            <div class="table-content" style="padding: 10px;">
+                                <table>
+                                    <tr>
+                                        <td>Loại văn bản:</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mức độ ưu tiên:</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loại văn bản:</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Số hiệu:</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cơ quan ra văn bản:</td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-12 col-xs-12">
+                                    <div class="form-group">
+                                        <div class="label-text">Trích yếu nội dung: </div>
+                                        <textarea name="" id="quote" class="form-control" disabled cols="30" rows="5"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-12 col-xs-12">
+                                    <div class="form-group">
+                                        <div class="label-text">Mô tả: </div>
+                                        <textarea name="" id="description" class="form-control" disabled cols="30" rows="5"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-12">
+                    <div class="box" style="min-height:calc(100vh - 170px);">
+                        <div class="box-body">
+                            <div class="table-content" style="padding: 10px;">
+                                <label for="">Nhân sự</label>
+                               <table>
+                                   <tr>
+                                       <td>Cán bộ thực hiện:</td>
+                                       <td></td>
+                                   </tr>
+                                   <tr>
+                                       <td>Cán bộ giao văn bản:</td>
+                                       <td></td>
+                                   </tr>
+                               </table>
+                                <hr>
+                                <label for="">Thời gian thực hiện</label>
+                                <table>
+                                    <tr>
+                                        <td>Ngày ra văn bản:</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ngày tiếp nhận:</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ngày giao:</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ngày đến hạn:</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ngày hoàn thành:</td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
