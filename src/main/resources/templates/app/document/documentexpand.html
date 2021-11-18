@@ -4,11 +4,11 @@
 <head>
     <meta charset="utf-8" />
     <title>Chi tiết văn bản</title>
-    <script type="text/javascript" th:src="@{/public/js/model/Document.js}"></script>
-    <script type="text/javascript" th:src="@{/public/js/app/document/DocumentView.js}"></script>
-    <script type="text/javascript">
-        var oDocumentView = new DocumentView();
-    </script>
+<!--    <script type="text/javascript" th:src="@{/public/js/model/Document.js}"></script>-->
+<!--    <script type="text/javascript" th:src="@{/public/js/app/document/DocumentView.js}"></script>-->
+<!--    <script type="text/javascript">-->
+<!--        var oDocumentView = new DocumentView();-->
+<!--    </script>-->
     <style>
         tr > td > .row-actions {
            display:none;
@@ -45,7 +45,7 @@
                     <div class="box" style="min-height:calc(100vh - 170px);">
                         <div class="box-body">
                             <div class="table-content" style="padding: 10px;">
-                                <table>
+                                <table class="table table-hover">
                                     <tr>
                                         <td>Loại văn bản:</td>
                                         <td></td>
@@ -87,6 +87,25 @@
                                 </div>
                             </div>
 
+                            <div class="row">
+                                <div class="col-sm-12 col-xs-12">
+                                    <div class="form-group">
+                                        <div class="label-text">Đính kèm tệp: </div>
+                                        <input type="file" class="form-control" style="width: 30%">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-12 col-xs-12">
+                                    <div class="form-group">
+                                        <div class="label-text">Comment: </div>
+                                        <div>- Comment</div>
+                                        <div>- Comment</div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -95,7 +114,7 @@
                         <div class="box-body">
                             <div class="table-content" style="padding: 10px;">
                                 <label for="">Nhân sự</label>
-                               <table>
+                               <table class="table">
                                    <tr>
                                        <td>Cán bộ thực hiện:</td>
                                        <td></td>
@@ -107,7 +126,7 @@
                                </table>
                                 <hr>
                                 <label for="">Thời gian thực hiện</label>
-                                <table>
+                                <table class="table">
                                     <tr>
                                         <td>Ngày ra văn bản:</td>
                                         <td></td>
