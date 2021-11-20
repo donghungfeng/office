@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <title>Chi tiết văn bản</title>
-<!--    <script type="text/javascript" th:src="@{/public/js/model/Document.js}"></script>-->
+    <script type="text/javascript" th:src="@{/public/js/model/Document.js}"></script>
 <!--    <script type="text/javascript" th:src="@{/public/js/app/document/DocumentView.js}"></script>-->
 <!--    <script type="text/javascript">-->
 <!--        var oDocumentView = new DocumentView();-->
@@ -48,23 +48,19 @@
                                 <table class="table table-hover">
                                     <tr>
                                         <td>Loại văn bản:</td>
-                                        <td></td>
+                                        <td id="type"></td>
                                     </tr>
                                     <tr>
                                         <td>Mức độ ưu tiên:</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Loại văn bản:</td>
-                                        <td></td>
+                                        <td id="priority"></td>
                                     </tr>
                                     <tr>
                                         <td>Số hiệu:</td>
-                                        <td></td>
+                                        <td id="num"></td>
                                     </tr>
                                     <tr>
                                         <td>Cơ quan ra văn bản:</td>
-                                        <td></td>
+                                        <td id="organOut"></td>
                                     </tr>
                                 </table>
                             </div>
@@ -117,11 +113,11 @@
                                <table class="table">
                                    <tr>
                                        <td>Cán bộ thực hiện:</td>
-                                       <td></td>
+                                       <td id="assignee"></td>
                                    </tr>
                                    <tr>
                                        <td>Cán bộ giao văn bản:</td>
-                                       <td></td>
+                                       <td id="reporter"></td>
                                    </tr>
                                </table>
                                 <hr>
@@ -129,23 +125,23 @@
                                 <table class="table">
                                     <tr>
                                         <td>Ngày ra văn bản:</td>
-                                        <td></td>
+                                        <td id="dateOut"></td>
                                     </tr>
                                     <tr>
                                         <td>Ngày tiếp nhận:</td>
-                                        <td></td>
+                                        <td id="dateReceive"></td>
                                     </tr>
                                     <tr>
                                         <td>Ngày giao:</td>
-                                        <td></td>
+                                        <td id="dateAsssign"></td>
                                     </tr>
                                     <tr>
                                         <td>Ngày đến hạn:</td>
-                                        <td></td>
+                                        <td id="dateExpiration"></td>
                                     </tr>
                                     <tr>
                                         <td>Ngày hoàn thành:</td>
-                                        <td></td>
+                                        <td id="dateDone"></td>
                                     </tr>
                                 </table>
                             </div>
