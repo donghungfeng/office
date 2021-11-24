@@ -5,10 +5,10 @@
     <meta charset="utf-8" />
     <title>Chi tiết văn bản</title>
     <script type="text/javascript" th:src="@{/public/js/model/Document.js}"></script>
-<!--    <script type="text/javascript" th:src="@{/public/js/app/document/DocumentView.js}"></script>-->
-<!--    <script type="text/javascript">-->
-<!--        var oDocumentView = new DocumentView();-->
-<!--    </script>-->
+    <script type="text/javascript" th:src="@{/public/js/app/document/DocumentExpandView.js}"></script>
+    <script type="text/javascript">
+        var oDocumentExpandView = new DocumentExpandView();
+    </script>
     <style>
         tr > td > .row-actions {
            display:none;
@@ -47,7 +47,7 @@
                             <div class="table-content" style="padding: 10px;">
                                 <table class="table table-hover">
                                     <tr>
-                                        <td>Loại văn bản:</td>
+                                        <td style="width: 30%">Loại văn bản:</td>
                                         <td id="type"></td>
                                     </tr>
                                     <tr>

@@ -23,6 +23,7 @@ var DocumentView = function () {
 			var act = '<div class="row-actions">';
 			act += '<button class="btn btn-info btnEdit" data-id="'+ item.id +'"><i class="fa fa-edit"></i></button>';
 			act += '<button class="btn btn-danger btnDel" data-id="'+ item.id +'"><i class="fa fa-trash"></i></button>';
+			act += '<button class="btn btn-success btnExpand" data-id="'+ item.id +'"><i class="fa fa-arrows-alt"></i></button>';
 			act += '</div>';
 
 			aRows.push([
@@ -58,6 +59,11 @@ var DocumentView = function () {
 			var url = CONFIG_APP.URL.CONTEXT + '/app/document/documentdetails?id=' + id;
 			that.oDialog.show('Sửa thông tin văn bản', url, '50%', '800px');
 			return false;
+		});
+		$('#Grid01').on('click', '.btnExpand', function () {
+			var id = $(this).data('id');
+			var url = CONFIG_APP.URL.CONTEXT + '/app/document/documentexpand?id=' + id;
+			window.location.href = url;
 		});
 
 		$('#Grid01').on('click', '.btnDel', function () {
