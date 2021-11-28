@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/public/document")
+@RequestMapping("/api/document")
 public class DocumentApi extends BaseApi<DocumentEntity> {
     private final DocumentService documentService;
 

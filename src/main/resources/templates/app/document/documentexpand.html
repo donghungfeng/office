@@ -32,9 +32,10 @@
                             <div class="box-form FORM">
                                 <div class="row">
                                     <div class="form-group col-sm-3 ACTIONS">
-                                        <button class="btn btn-success" id="btnAddNew"><i class="fa fa-plus"></i> Chỉnh sửa</button>
-                                        <button class="btn btn-success" id="btnAddNew"><i class="fa fa-plus"></i> Comment</button>
-                                        <button class="btn btn-success" id="btnAddNew"><i class="fa fa-plus"></i> Chuyển trạng thái</button>
+                                        <button class="btn btn-success" id="btnAddNew"><i class="fa fa-edit"></i> Chỉnh sửa</button>
+                                        <button class="btn btn-success" id="btnComment"><i class="fa fa-comment"></i> Comment</button>
+                                        <button class="btn btn-danger" id="btnAddNew"><i class="fa fa-trash"></i> Hủy</button>
+                                        <span id="status"></span>
                                     </div>
                                 </div>
                             </div>
@@ -98,6 +99,11 @@
                                         <div class="label-text">Comment: </div>
                                         <div>- Comment</div>
                                         <div>- Comment</div>
+                                    </div>
+                                    <div class="text-right" id="comment" style="display: none">
+                                        <textarea name="" style="margin-bottom: 5px" class="form-control" id="" cols="30" rows="5"></textarea>
+                                        <button class="btn btn-success text-right">Add</button>
+                                        <button class="btn btn-danger text-right">Cancel</button>
                                     </div>
                                 </div>
                             </div>

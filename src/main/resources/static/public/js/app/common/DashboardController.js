@@ -17,19 +17,14 @@ var DashboardController = function(){
 		for (var i = 0; i < that.oDocument.LIST.length; i++) {
 			var item = that.oDocument.LIST[i];
 			var act = '<div class="row-actions">';
-			act += '<button class="btn btn-info btnEdit" data-id="'+ item.id +'"><i class="fa fa-edit"></i></button>';
-			act += '<button class="btn btn-danger btnDel" data-id="'+ item.id +'"><i class="fa fa-trash"></i></button>';
+			act += '<button class="btn btn-sm btn-success btnExpand" data-id="'+ item.id +'"><i class="fa fa-arrows-alt"></i></button>';
 			act += '</div>';
 
 			aRows.push([
 				(i + 1),
 				item.num,
 				item.organOut,
-				item.dateOut,
-				item.dateReceive,
-				item.quote,
-				item.assgineeId?item.assgineeId.name:'',
-				"Hoàn thành",
+				new Date(item.dateExpiration).toLocaleDateString(),
 				act
 			]);
 		}
@@ -41,6 +36,12 @@ var DashboardController = function(){
 		that.oTable = ControlHelper.Datatable.Init('Grid01', 10, true);
 
 		that.initPage();
+
+		$('#Grid01').on('click', '.btnExpand', function () {
+			var id = $(this).data('id');
+			var url = CONFIG_APP.URL.CONTEXT + '/app/document/documentexpand?id=' + id;
+			window.location.href = url;
+		});
 
 	});
 }

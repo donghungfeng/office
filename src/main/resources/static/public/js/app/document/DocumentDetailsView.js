@@ -30,7 +30,7 @@ var DocumentDetailsView = function(){
 			$('#organOut').val(that.oDocument.organOut);
 			$('#dateOut').val(that.oDocument.dateOut);
 			$('#dateReceive').val(that.oDocument.dateReceive);
-			$('#assignee').val(that.oDocument.assgineeId.id);
+			$('#assignee').val(that.oDocument.assgineeId?that.oDocument.assgineeId.id:'0');
 			$('#quote').val(that.oDocument.quote);
 			$('#description').val(that.oDocument.description);
 
@@ -55,14 +55,14 @@ var DocumentDetailsView = function(){
 			that.oDocument.organOut = $('.FORM #organOut').val();
 			that.oDocument.dateOut = new Date($('.FORM #dateOut').val()).getTime();
 			that.oDocument.dateReceive = new Date($('.FORM #dateReceive').val()).getTime();
-			that.oDocument.assgineeId = {id: $('.FORM #assignee').val()};
+			that.oDocument.assgineeId = $('.FORM #assignee').val()=='0'?null:{id: $('.FORM #assignee').val()};
 			that.oDocument.quote =  $('.FORM #quote').val();
 			that.oDocument.description = $('.FORM #description').val();
 
 			var rs = that.oDocument.save();
 			alert(rs.MESSAGE);
-
-			that.lockForm(true);
+			//
+			// that.lockForm(true);
 		});
 
 		$('.ACTIONS').on('click', '#btnClose', function () {

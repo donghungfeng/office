@@ -30,6 +30,22 @@ var DocumentExpandView = function(){
 					$('#priority').html("Cao");
 					break;
 			};
+			let _status = '';
+			switch (that.oDocument.status) {
+				case -1:
+					_status = '<button class="btn btn-danger" id="btnStatus"> Đã hủy</button>';
+					break;
+				case 0:
+					_status = '<button class="btn btn-warning" id="btnStatus"> Tiếp nhận</button>';
+					break;
+				case 2:
+					_status = '<button class="btn btn-info" id="btnStatus"> Đang xử lý</button>';
+					break;
+				case 3:
+					_status = '<button class="btn btn-success" id="btnStatus"> Đã hoàn thành</button>';
+					break;
+			};
+			$('#status').html(_status);
 			$('#num').html(that.oDocument.num);
 			$('#organOut').html(that.oDocument.organOut);
 			$('#quote').html(that.oDocument.quote);
@@ -63,6 +79,14 @@ var DocumentExpandView = function(){
 	$(document).ready(function () {
 
 		that.initPage();
+
+		$('#btnStatus').on('click', function () {
+			alert("xác nhận chuyển trạng thái");
+		})
+
+		$('#btnComment').on('click', function () {
+			$('#comment').css("display","block");
+		})
 
 	});
 }

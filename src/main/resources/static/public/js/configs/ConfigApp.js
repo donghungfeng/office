@@ -5,7 +5,7 @@ const CONFIG_APP = {
 		CONTEXT : ''
 		,HOME:'app/common/dashboard'
 		,LOGIN:'/'
-		,API_DATA:'/public'
+		,API_DATA:'/api'
 		,LOGIN_PAGE:'/'
 
 	},
