@@ -17,7 +17,6 @@ var UserDetailsView = function(){
 		that.AppTitle = that.oUser.id == 0? 'Thêm mới Cán bộ':'Cập nhật thông tin Cán bộ';
 		that.lockForm(false);
 
-		$('.bootstrap-dialog-title', window.parent.document).html(that.AppTitle);
 		if (that.oUser.id != 0) {
 			that.oUser.getById();
 			$('#name').val(that.oUser.name);

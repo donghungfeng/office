@@ -23,7 +23,7 @@ public class ServerGui {
         int fileId = 0;
 
         // Main container, set the name.
-        JFrame jFrame = new JFrame("WittCode's Server");
+        JFrame jFrame = new JFrame("Office's Server");
         // Set the size of the frame.
         jFrame.setSize(400, 400);
         // Give the frame a box layout that stacks its children on top of each other.
@@ -42,7 +42,7 @@ public class ServerGui {
         jScrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
 
         // Title above panel.
-        JLabel jlTitle = new JLabel("WittCode's File Receiver");
+        JLabel jlTitle = new JLabel("Tiếp nhận File");
         // Change the font of the title.
         jlTitle.setFont(new Font("Arial", Font.BOLD, 25));
         // Add a border around the title for spacing.
@@ -143,12 +143,6 @@ public class ServerGui {
         }
     }
 
-    /**
-     * When the jpanel is clicked a popup shows to say whether the user wants to download
-     * the selected document.
-     *
-     * @return A mouselistener that is used by the jpanel.
-     */
     public static MouseListener getMyMouseListener() {
         return new MouseListener() {
             @Override
@@ -176,6 +170,8 @@ public class ServerGui {
                                 fileOutputStream.write(myFile.getData());
                                 // Close the stream.
                                 fileOutputStream.close();
+
+                                JOptionPane.showMessageDialog(null,"Đã lưu file vào "+jFileChooser.getSelectedFile().getAbsolutePath());
                             } catch (IOException ex) {
                                 ex.printStackTrace();
                             }

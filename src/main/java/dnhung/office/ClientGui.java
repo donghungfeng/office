@@ -16,7 +16,7 @@ public class ClientGui {
         final File[] fileToSend = new File[1];
 
         // Set the frame to house everything.
-        JFrame jFrame = new JFrame("WittCode's Client");
+        JFrame jFrame = new JFrame("Office's Client");
         // Set the size of the frame.
         jFrame.setSize(450, 450);
         // Make the layout to be box layout that places its children on top of each other.
@@ -25,7 +25,7 @@ public class ClientGui {
         jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         // Title above panel.
-        JLabel jlTitle = new JLabel("WittCode's File Sender");
+        JLabel jlTitle = new JLabel("Truyền File tới máy chủ");
         // Change the font family, size, and style.
         jlTitle.setFont(new Font("Arial", Font.BOLD, 25));
         // Add a border around the label for spacing.
@@ -47,13 +47,13 @@ public class ClientGui {
         // Border for panel that houses buttons.
         jpButton.setBorder(new EmptyBorder(75, 0, 10, 0));
         // Create send file button.
-        JButton jbSendFile = new JButton("Send File");
+        JButton jbSendFile = new JButton("Gửi File");
         // Set preferred size works for layout containers.
         jbSendFile.setPreferredSize(new Dimension(150, 75));
         // Change the font style, type, and size for the button.
         jbSendFile.setFont(new Font("Arial", Font.BOLD, 20));
         // Make the second button to choose a file.
-        JButton jbChooseFile = new JButton("Choose File");
+        JButton jbChooseFile = new JButton("Chọn File");
         // Set the size which must be preferred size for within a container.
         jbChooseFile.setPreferredSize(new Dimension(150, 75));
         // Set the font for the button.
@@ -77,7 +77,7 @@ public class ClientGui {
                     // Get the selected file.
                     fileToSend[0] = jFileChooser.getSelectedFile();
                     // Change the text of the java swing label to have the file name.
-                    jlFileName.setText("The file you want to send is: " + fileToSend[0].getName());
+                    jlFileName.setText("File: " + fileToSend[0].getName());
                 }
             }
         });

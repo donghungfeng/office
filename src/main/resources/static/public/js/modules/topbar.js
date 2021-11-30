@@ -1,5 +1,7 @@
 var TopBar = function() {
 
+	this.oDialog = null;
+
 	var that = this;
 	
 	this.init = function() {
@@ -89,9 +91,16 @@ var TopBar = function() {
 
 	
 	$(function(){
+
+		that.oDialog = new PopupDialog(reload);
 		
 		that.init();
-		
+
+		function reload() {
+
+		}
+
+
 		setInterval(that.updateClock, 1000);
 		
 		$(".menus .item").click(function () {
@@ -120,39 +129,9 @@ var TopBar = function() {
 		});
 		
 		$('#btnChangePass').click(function(){
-			var oldPassword = $('#oldPassword').val();
-			var newPassword = $('#newPassword').val();
-			var valid = that.validChangePass();
-			if (valid !='' ) {
-				var oAlert = new AlertDialog('Cảnh báo');
-				oAlert.show(valid,'60%', '50px');
-				that.clearChangePassForm();
-				return;
-			}
-
-			try {
-				var data = {
-					oldPassword:oldPassword,
-					newPassword:newPassword
-				}
-				var rs = ApiHelper.Private.post(CONFIG_API.URL.ACCOUNT_CHANGEPASS,data);
-				if (rs.errorCode == 'REQUEST_SUCCESS') {
-					var oAlert = new AlertDialog('Thông báo');
-					oAlert.show('Đổi mật khẩu thành công!','50%', '50px');
-					that.clearChangePassForm();
-					AuthenHelper.logout();
-					return;
-				}else{
-					var oAlert = new AlertDialog('Thông báo');
-					oAlert.show('Đổi mật khẩu thất bại, Lỗi:' + rs.errorMessage,'50%', '50px');
-					that.clearChangePassForm();
-					return;
-				}
-				
-			} catch (error) {
-				console.log('ERROR', error);
-				return;
-			}
+			let id = 0;
+			let url = CONFIG_APP.URL.CONTEXT + '/app/system/changepassword?id=' + id;
+			that.oDialog.show('Đổi mật khẩu', url, '40%', '300px');
 		});
 	})
 	

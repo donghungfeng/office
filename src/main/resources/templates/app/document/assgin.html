@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="layout/main">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Khai báo | Chỉ định thực hiện văn bản</title>
+    <script type="text/javascript" th:src="@{/public/js/model/Document.js}"></script>
+    <script type="text/javascript" th:src="@{/public/js/app/document/AssignView.js}"></script>
+    <script type="text/javascript">
+        var oAssignView = new AssignView();
+    </script>
+    <style>
+        tr > td > .row-actions {
+           display:none;
+        }
+
+        tr.selected > td >  .row-actions {
+            display:block !important;
+        }
+        .row-actions button{margin: 0 4px !important;}
+    </style>
+</head>
+
+<body>
+    <div layout:fragment="content">
+        <div class="main-content">
+            <div class="row">
+                <div class="col-sm-12 col-xs-12">
+                    <a th:href="@{/app/common/dashboard}" class="url">OFFICE</a> > <a href="#">Quản lý văn bản</a> > <a
+                        href="">Danh sách văn bản</a>
+                </div>
+
+                <div class="col-sm-12 col-xs-12">
+                    <div class="box-form box">
+                        <div class="box-body">
+                            <h4 class="form-title" id="AppTitle"></h4>
+                            <div class="box-form FORM">
+                                <div class="row">
+                                    <div class="form-group col-sm-3 ACTIONS" style="padding-top: 18px;">
+                                        <button class="btn btn-success" id="btnAddNew"><i class="fa fa-plus"></i> Tạo
+                                            mới</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-xs-12">
+                    <div class="box" style="min-height:calc(100vh - 170px);">
+                        <div class="box-body">
+                            <div class="table-content" style="padding: 10px;">
+                                <table class="table table-bordered" id="Grid01">
+                                    <thead>
+                                        <tr>
+                                            <th style="width:50px;text-align: center;">STT</th>
+                                            <th>Số hiệu</th>
+                                            <th>Cơ quan ra văn bản</th>
+                                            <th>Ngày ra văn bản</th>
+                                            <th>Ngày đến</th>
+                                            <th>Trích yếu nội dung</th>
+                                            <th>Cán bộ thực hiện</th>
+                                            <th>Trạng thái</th>
+                                            <th style="width:150px;text-align: center;">Tác vụ</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
