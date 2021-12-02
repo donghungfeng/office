@@ -1,15 +1,17 @@
 var AssignView = function () {
 	// Thuộc tính
 	var that = this;
-	this.AppTitle = 'Chỉ định thực hiện văn bản';
+	this.AppTitle = 'CHỈ ĐỊNH THỰC HIỆN VĂN BẢN';
 	this.oTable = null;
 	this.oDialog = null;
 	this.oDocument = new Document();
+	this.oUser = new User();
 
 	// Phương thức
 	this.initPage = function () {
 		$('#AppTitle').html(that.AppTitle);
 		document.title = that.AppTitle;
+		that.oUser.getHtmlSelect();
 		that.bindGrid();
 	}
 
@@ -26,6 +28,8 @@ var AssignView = function () {
 			act += '<button class="btn btn-success btnExpand" data-id="'+ item.id +'"><i class="fa fa-arrows-alt"></i></button>';
 			act += '</div>';
 
+			var select = '<select class="form-control selAssign">' + that.oUser.htmlSelect + '</select>';
+
 			aRows.push([
 				(i + 1),
 				item.num,
@@ -33,7 +37,7 @@ var AssignView = function () {
 				new Date(item.dateOut).toLocaleDateString(),
 				new Date(item.dateReceive).toLocaleDateString(),
 				item.quote,
-				item.assgineeId?item.assgineeId.name:'',
+				select,
 				"Hoàn thành",
 				act
             ]);
