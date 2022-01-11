@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <title>Khai báo | Chỉ định thực hiện văn bản</title>
     <script type="text/javascript" th:src="@{/public/js/model/Document.js}"></script>
+    <script type="text/javascript" th:src="@{/public/js/model/User.js}"></script>
     <script type="text/javascript" th:src="@{/public/js/app/document/AssignView.js}"></script>
     <script type="text/javascript">
         var oAssignView = new AssignView();
@@ -27,21 +28,13 @@
             <div class="row">
                 <div class="col-sm-12 col-xs-12">
                     <a th:href="@{/app/common/dashboard}" class="url">OFFICE</a> > <a href="#">Quản lý văn bản</a> > <a
-                        href="">Danh sách văn bản</a>
+                        href="">Chỉ định thực hiện văn bản</a>
                 </div>
 
                 <div class="col-sm-12 col-xs-12">
                     <div class="box-form box">
-                        <div class="box-body">
+                        <div class="box-body text-center">
                             <h4 class="form-title" id="AppTitle"></h4>
-                            <div class="box-form FORM">
-                                <div class="row">
-                                    <div class="form-group col-sm-3 ACTIONS" style="padding-top: 18px;">
-                                        <button class="btn btn-success" id="btnAddNew"><i class="fa fa-plus"></i> Tạo
-                                            mới</button>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>

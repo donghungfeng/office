@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <title>Khai báo | Giám sát tiến độ thực hiện</title>
     <script type="text/javascript" th:src="@{/public/js/model/User.js}"></script>
-    <script type="text/javascript" th:src="@{/public/js/app/system/ProcessView.js}"></script>
+    <script type="text/javascript" th:src="@{/public/js/app/document/ProcessView.js}"></script>
     <script type="text/javascript">
         var oProcessView = new ProcessView();
     </script>
@@ -26,21 +26,13 @@
         <div class="main-content">
             <div class="row">
                 <div class="col-sm-12 col-xs-12">
-                    <a th:href="@{/app/common/dashboard}" class="url">SUSOPA</a> > <a href="#">Hệ thống</a> > <a
-                        href="">Quản lý tài khoản</a>
+                    <a th:href="@{/app/common/dashboard}" class="url">OFFICE</a> > <a href="#">Quản lý văn bản</a> > <a
+                        href="">Giám sát tiến độ thực hiện</a>
                 </div>
                 <div class="col-sm-12 col-xs-12">
                     <div class="box-form box">
-                        <div class="box-body">
+                        <div class="box-body text-center">
                             <h4 class="form-title" id="AppTitle"></h4>
-                            <div class="box-form FORM">
-                                <div class="row">
-                                    <div class="form-group col-sm-3 ACTIONS" style="padding-top: 18px;">
-                                        <button class="btn btn-success" id="btnAddNew"><i class="fa fa-plus"></i> Tạo
-                                            mới</button>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -52,12 +44,13 @@
                                     <thead>
                                         <tr>
                                             <th style="width:50px;text-align: center;">STT</th>
-                                            <th>Tài khoản</th>
                                             <th>Tên cán bộ</th>
                                             <th>Số điện thoại</th>
                                             <th>Email</th>
                                             <th>Ngày sinh</th>
-                                            <th>Trạng thái</th>
+                                            <th>Số văn bản quá hạn</th>
+                                            <th>Số văn bản đang xử lý</th>
+                                            <th>Chi tiết</th>
                                         </tr>
                                     </thead>
                                     <tbody>

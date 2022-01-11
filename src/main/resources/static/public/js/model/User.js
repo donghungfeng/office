@@ -22,6 +22,7 @@ var User = function(){
 	this.position = '';
 	this.status=1;
 	this.email = '';
+	this.htmlSelect = '';
 
 	this.validSave = function(){
 		var alert = '';
@@ -95,6 +96,14 @@ var User = function(){
 		$(sControlId).html(html);
 		$(sControlId).select2();
 		$(sControlId).val($(sControlId + ' option:first-child').val()).trigger('change');
+	}
+	this.getHtmlSelect = function(){
+		that.getAll();
+		that.htmlSelect = '<option  value="0"> -Chọn cán bộ thực hiện- </option>';
+		for (let i = 0; i < that.LIST.length; i++) {
+			var item = that.LIST[i];
+			that.htmlSelect +='<option  value="'+ item.id +'">' + item.name +'</option>';
+		}
 	}
 
 }

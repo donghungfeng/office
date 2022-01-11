@@ -1,7 +1,7 @@
 var ProcessView = function () {
 	// Thuộc tính
 	var that = this;
-	this.AppTitle = 'Giám sát tiến độ thực hiện';
+	this.AppTitle = 'GIÁM SÁT TIẾN ĐỘ THỰC HIỆN';
 	this.oTable = null;
 	this.oDialog = null;
 	this.oUser = new User();
