@@ -9,9 +9,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
+import java.net.Socket;
 
 @RestController
 @CrossOrigin
@@ -22,11 +21,18 @@ public class FileUploadApi {
 	
 	@PostMapping("/uploadFile")
 	public ResponseEntity<Object> fileUpload(@RequestParam("file") MultipartFile file) throws IOException{
-		File myFile = new File(FILE_DIRECTORY+file.getOriginalFilename());
-		myFile.createNewFile();
-		FileOutputStream fos =new FileOutputStream(myFile);
-		fos.write(file.getBytes());
-		fos.close();
+		try {
+			Socket socket = new Socket("127.0.0.1", 1234);
+			DataOutputStream dataOutputStream = new DataOutputStream(socket.getOutputStream());
+			String fileName = "D:\\SaveNew\\" + file.getOriginalFilename();
+			byte[] fileNameBytes = fileName.getBytes();
+			dataOutputStream.writeInt(fileNameBytes.length);
+			dataOutputStream.write(fileNameBytes);
+			dataOutputStream.writeInt(file.getBytes().length);
+			dataOutputStream.write(file.getBytes());
+		} catch (IOException ex) {
+			ex.printStackTrace();
+		}
 		return new ResponseEntity<Object>("The File Uploaded Successfully", HttpStatus.OK);
 	}
 }

@@ -44,7 +44,7 @@ public class Server {
 
                         System.out.println(fileName);
 
-                        File fileToDownload = new File("D:\\"+fileName);
+                        File fileToDownload = new File(fileName);
                         try {
                             // Create a stream to write data to the file.
                             FileOutputStream fileOutputStream = new FileOutputStream(fileToDownload);
