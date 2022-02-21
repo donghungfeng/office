@@ -31,7 +31,7 @@ public class NotificationEntity {
     public void setToId(UserEntity toId){this.toId=toId;}
 
     @Basic
-    @Column(name = "from")
+    @Column(name = "from_name")
     public String getFrom() {
         return from;
     }

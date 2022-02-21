@@ -90,9 +90,21 @@
 					<div class="col-sm-6 col-xs-12">
 						<div class="box">
 							<div class="box-head">
+
 								<div class="title">Thông báo quan trọng
-									<i class="fa fa-plus pull-right"></i>
+									<i class="fa fa-plus pull-right" id="btnAdd"></i>
 								</div>
+								<br>
+
+								<table id="Grid02">
+									<thead>
+									<tr>
+										<th>Thông báo</th>
+										<th style="width:50px;text-align: center;"></th>
+									</tr>
+									</thead>
+
+								</table>
 								<div style="margin-top: 20px;font-size: 15px;color:red">
 									<i>- Công việc quan trọng cần thực hiện</i>
 									<i class="fa fa-trash pull-right"></i>
@@ -106,7 +118,8 @@
 									<i class="fa fa-trash pull-right"></i>
 								</div>
 								<div style="margin-top: 20px;font-size: 15px;color:red">
-									<input type="text" class="form-control" disabled>
+									<input type="text" id="txtNoti" style="width: 80%" disabled>
+									<button class="btn btn-success" id="btnSave" disabled>Lưu</button>
 								</div>
 								<div class="clearfix"></div>
 							</div>
